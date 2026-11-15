@@ -1,82 +1,85 @@
-# Nadila Eriani Afsri — Portfolio (Local ZIP)
+# Nadila Eriani Afsri — React Portfolio
 
-A complete, editable, responsive portfolio website. The design follows the earlier single-page portfolio style and updates the public project information to match the internship and LinkedIn experience supplied by the owner.
+Portofolio pribadi dengan pendekatan **editorial developer portfolio**. Dibangun menggunakan **React + Vite + CSS**, konten tersedia dalam bahasa Inggris dan Indonesia.
 
-## Open locally (no installation required)
+## Menjalankan di Windows / VS Code
 
-1. Extract this ZIP into a folder.
-2. Open `index.html` in Chrome, Edge, or Firefox.
-3. Switch between **EN** and **ID** in the top-right corner.
-4. Edit HTML, CSS, or JS in VS Code as needed.
+1. Ekstrak ZIP, buka folder **Nadila_Portfolio_React_Editorial** di VS Code.
+2. Pastikan Node.js versi **20.19+ atau 22+** tersedia: `node -v`.
+3. Jalankan perintah di terminal **dalam folder yang mengandung `package.json`**:
 
-For a local development server with Python (optional):
+   ```powershell
+   npm install
+   npm run dev
+   ```
 
-```bash
-python -m http.server 8000
+4. Buka URL lokal yang muncul, umumnya **http://localhost:5173/**.
+
+> **Catatan:** Ini project React, berbeda dengan ZIP HTML statis sebelumnya. Jangan langsung membuka `index.html` tanpa menjalankan Vite.
+
+## Build produksi
+
+```powershell
+npm run build
+npm run preview
 ```
 
-Then open `http://localhost:8000`.
+Hasil build tersedia dalam folder `dist/` dan bisa diunggah ke layanan hosting statis. Atur deployment sesuai platform hosting yang dipakai. `base: './'` pada konfigurasi Vite memungkinkan penggunaan jalur relatif.
 
-## Project structure
+## Struktur source
 
 ```text
-Nadila_Portfolio_Revisi/
-├── index.html                  # Structure and public content
-├── styles.css                  # Responsive visual design
-├── app.js                      # Bilingual text, navigation and project modal
-├── assets/
+Nadila_Portfolio_React_Editorial/
+├── index.html
+├── package.json
+├── vite.config.js
+├── .gitignore
+├── public/
 │   ├── favicon.svg
-│   ├── nadila-profile.png      # Image extracted from owner-supplied LinkedIn PDF
-│   ├── sibapak-original.png    # Image extracted from owner-supplied LinkedIn PDF
-│   └── library-portal-live.png # Cropped actual public homepage screenshot supplied in chat
-└── README.md
+│   └── images/
+│       ├── profile.png
+│       ├── sibapak.png
+│       └── library.png
+└── src/
+    ├── main.jsx
+    ├── App.jsx
+    └── styles.css
 ```
 
-## Scope of updates
+## Konsep desain
 
-- Changed the internship title to **Full-Stack Developer Intern**.
-- Corrected the library portal from frontend-only to full-stack involvement.
-- Explicitly reflected Next.js, NestJS, MariaDB, Docker Compose, and Linux VPS work.
-- Added a live website link to the Library Portal project detail dialog.
-- Replaced illustrative Library Portal UI with an owner-supplied real screenshot.
-- Preserved bilingual EN/ID navigation, responsive layout, projects, experience, skills, and contact features.
-- Kept SiBapak descriptions conservative and did not claim unsupported individual responsibilities.
-- Avoided an "Open to Work" announcement; the header instead indicates ongoing projects and learning.
+- **Font:** DM Sans untuk teks antarmuka dan Instrument Serif sebagai aksen editorial.
+- **Palet:** warm ivory, charcoal, muted olive, dan soft terracotta.
+- **Tata letak:** tipografi kuat, whitespace, dokumentasi proyek yang nyata, tanpa testimoni atau metrik yang dibuat-buat.
+- **Interaksi:** pilihan bahasa EN/ID, menu mobile, pratinjau screenshot, tautan website publik.
+- **Konten:** berdasarkan versi terbaru repository `nadilaerianiafsri-nea/nadila-portfolio` pada 15 November 2026 dan informasi pemilik.
 
-## Important privacy notes
+## Proyek
 
-- This ZIP includes only the **portfolio website** source code, not the private `perpus-portal` project code.
-- No SSH hostnames, credentials, API keys, or private repository files are published in this package.
-- Confirm that project screenshots are approved for public display before uploading to any public host.
-
-## Links
-
+- SiBapak: https://sibapak.pocari.id/
+- Portal Perpustakaan Kemenkum Riau: https://portalperpusriau.tech/
 - LinkedIn: https://www.linkedin.com/in/nadila-eriani-afsri-a661a6403/
-- Library Portal (public): https://portalperpusriau.tech/
-- SiBapak (listed in existing portfolio): https://sibapak.pocari.id/
 
-## GitHub status
+## Catatan aset dan privasi
 
-This ZIP is meant for local review. It has **not** been uploaded as a new GitHub commit. The earlier draft branch and pull request created in the previous conversation step are separate from this ZIP, and `main` was not modified by that draft.
+- Aset gambar disalin dari repository portofolio publik yang telah terverifikasi, tanpa mengambil source code dari repository aplikasi yang private.
+- Gambar SiBapak di `main` saat pengemasan berukuran **480×270 px**, jadi teks kecil di screenshot mungkin tidak jelas ketika diperbesar. **Ini batas file sumber, bukan bug CSS.** Gunakan screenshot asli resolusi lebih tinggi di `public/images/sibapak.png` jika tersedia, tanpa perlu mengubah source React.
+- Tidak mengandung kunci server, SSH, token, rahasia aplikasi, atau repository private.
+- Tidak ada perubahan apa pun yang di-*push* ke GitHub; ZIP ini untuk tinjauan lokal.
 
-## Revisi tampilan dan tautan SiBapak
+## Kustomisasi cepat
 
-- Tautan langsung SiBapak: https://sibapak.pocari.id/ (tombol pada kartu dan dialog proyek).
-- Tautan langsung Library Portal: https://portalperpusriau.tech/.
-- Perbaikan kontras, hirarki teks, warna, tombol proyek, efek hover, serta responsivitas ponsel.
-- Label proyek dan tombol tersedia dalam bahasa Inggris/Indonesia.
-- Tidak ada perubahan yang dilakukan ke GitHub.
+- Konten EN/ID dan data proyek: `src/App.jsx` bagian `CONTENT` dan `PROJECTS`.
+- Styling semua section dan breakpoint: `src/styles.css`.
+- Foto profil dan screenshot proyek: `public/images/`.
+- Judul, metadata, dan font: `index.html`.
 
+## Aksesibilitas
 
-## Perbaikan fokus: kualitas gambar SiBapak (15 November 2026)
+Tersedia skip link, label navigasi, state tombol bahasa, menu mobile yang menggunakan atribut `aria-expanded`, popup screenshot dengan tombol tutup serta Esc, dan gaya `prefers-reduced-motion`.
 
-- **Penyebab visual:** Screenshot penuh resolusi 1920x1080 di GitHub ditampilkan pada kartu sempit. Tulisan yang seharusnya dibaca pada layar 1920px menjadi terlalu kecil ketika diperkecil ke 400–500px, sehingga tampak buram. Atribut `width`/`height` HTML bukan penyebab penurunan resolusi file aslinya.
-- Hanya kartu SiBapak diberi tampilan crop/focal preview agar bagian isi lebih terlihat. Proporsi screenshot tetap 16:9, tanpa meregangkan gambar.
-- Klik gambar atau tautan **View full-resolution screenshot / Lihat screenshot resolusi penuh** untuk membuka screenshot asli 1920x1080 di tab baru agar bisa diperbesar secara bebas.
-- URL gambar resolusi tinggi: https://raw.githubusercontent.com/nadilaerianiafsri-nea/nadila-portfolio/main/assets/sibapak-original.png (blob SHA 184f2da53c0b530a1ac4b6901788648209c982c9, diperiksa dari cabang `main` pada 15 November 2026).
-- Saat ada internet, halaman memuat screenshot resolusi tinggi dari repository GitHub publik. Jika offline/tidak terjangkau, beralih ke gambar lokal `assets/sibapak-original.png` berukuran 480x270 yang dibundel dari ZIP portofolio sebelumnya. Untuk **kualitas penuh offline** silakan ganti aset lokal dengan gambar asli 1920x1080 dari GitHub sebelum membuka halaman.
-- Tidak ada perubahan pada kartu proyek Library Portal, konten lain, ataupun repository GitHub. Perbaikan dilakukan hanya dalam paket ZIP lokal.
+## Penyempurnaan visual terbaru
 
-### Jika ingin semua gambar jernih juga saat offline
-
-Jalankan `python sync_sibapak_image.py` **sekali saat terhubung internet** dari folder hasil ekstrak ZIP. Script mengambil gambar asli beresolusi tinggi dari GitHub milikmu dan mengganti **hanya** `assets/sibapak-original.png` secara lokal setelah memverifikasi format dan resolusinya. Script ini tidak melakukan commit atau perubahan di GitHub.
+- Ornamen garis kecil sebelum label section (seperti `01 / PROYEK PILIHAN`) dihapus. Penomoran dan teks section tetap ada.
+- Monogram dekoratif `N / 26` di sudut foto hero dihapus agar tidak membingungkan pengunjung.
+- Komponen React, data proyek, tautan, foto, pilihan EN/ID, dan tampilan responsif lainnya dipertahankan.

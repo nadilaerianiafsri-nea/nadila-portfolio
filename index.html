@@ -1,72 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#f7f7f4">
-  <meta name="description" content="Nadila Eriani Afsri — Full-Stack Developer Intern and Informatics Engineering student. Selected projects, experience, and hands-on Docker and Linux VPS deployment.">
-  <meta property="og:title" content="Nadila Eriani Afsri | Full-Stack Developer">
-  <meta property="og:description" content="Selected work in full-stack web development, Docker, and practical deployments.">
-  <title>Nadila Eriani Afsri — Portfolio</title>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
-</head>
-<body>
-  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="#home" aria-label="Nadila Eriani Afsri — home"><span class="logo-mark">NE</span><span>Nadila<span class="dot">.</span></span></a>
-      <nav class="nav" id="primaryNav" aria-label="Main navigation">
-        <a href="#about" data-i18n="navAbout">About</a>
-        <a href="#work" data-i18n="navWork">Projects</a>
-        <a href="#experience" data-i18n="navExperience">Experience</a>
-        <a href="#skills" data-i18n="navSkills">Expertise</a>
-        <a href="#contact" data-i18n="navContact">Contact</a>
-      </nav>
-      <div class="header-actions">
-        <div class="lang-switch" role="group" aria-label="Language"><button class="active" data-lang="en" aria-pressed="true" type="button">EN</button><button data-lang="id" aria-pressed="false" type="button">ID</button></div>
-        <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false" aria-controls="primaryNav" type="button">☰</button>
-      </div>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <span class="availability"><span class="status-dot"></span><span data-i18n="status">Building, learning & collaborating</span></span>
-          <h1 data-i18n-html="heroTitle">Hi, I'm Nadila.<span class="line-break"></span><em>I build for people.</em></h1>
-          <p class="hero-intro" data-i18n-html="heroIntro">I'm <strong>Nadila Eriani Afsri</strong>, an Informatics Engineering student and Full-Stack Developer Intern working with web applications, Docker, and Linux server deployment.</p>
-          <div class="hero-actions"><a class="button button-primary" href="#work"><span data-i18n="seeWork">Explore my work</span> <span aria-hidden="true">↗</span></a><a class="button button-outline" href="https://www.linkedin.com/in/nadila-eriani-afsri-a661a6403/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
-          <div class="hero-meta"><span><span class="meta-icon">⌖</span> Pekanbaru, Indonesia</span><span><span class="meta-icon">✧</span><span data-i18n="heroMeta">Full-Stack Development · Docker & VPS</span></span></div>
-        </div>
-        <div class="portrait-wrap"><div class="portrait"><img src="assets/nadila-profile.png" width="800" height="800" alt="Portrait of Nadila Eriani Afsri" fetchpriority="high"></div><div class="portrait-sticker"><span class="sticker-icon">⌘</span><span class="sticker-text"><strong data-i18n="stickerTitle">Building & learning</strong><span data-i18n="stickerSub">One meaningful project at a time.</span></span></div></div>
-      </div>
-    </section>
-
-    <div class="micro-strip"><div class="container strip-inner"><span class="strip-label" data-i18n="stripTitle">Areas of focus</span><div class="strip-list"><span>Full-Stack Development</span><i></i><span>Web Applications</span><i></i><span>Docker & Linux VPS</span></div></div></div>
-
-    <section class="section" id="about"><div class="container about-grid"><div><span class="eyebrow" data-i18n="aboutEyebrow">01 / About me</span><h2 class="sec-title" data-i18n-html="aboutTitle">Curious by nature.<span class="line-break"></span>Purposeful in practice.</h2></div><div class="about-content"><p data-i18n-html="aboutP1">I'm an <strong>Informatics Engineering student at Politeknik Caltex Riau</strong>, currently building practical experience through software development and an internship at Kementerian Hukum Riau.</p><p data-i18n="aboutP2">I enjoy connecting accessible interfaces with backend services, working with databases, and understanding how applications run beyond a local development environment.</p><div class="facts"><div class="fact"><small data-i18n="factEducation">Education</small><strong>Politeknik Caltex Riau</strong></div><div class="fact"><small data-i18n="factLocation">Based in</small><strong>Pekanbaru, Riau, Indonesia</strong></div></div></div></div></section>
-
-    <section class="section work" id="work"><div class="container"><div class="work-head"><div><span class="eyebrow" data-i18n="workEyebrow">02 / Selected projects</span><h2 class="sec-title" data-i18n-html="workTitle">A closer look at<span class="line-break"></span>what I've worked on.</h2></div><p data-i18n="workIntro">Selected projects from academic collaboration and hands-on internship experience.</p></div>
-      <article class="project-card project-card--sibapak"><div class="project-visual"><div class="browser-frame"><div class="browser-top"><span class="browser-dots"><i></i><i></i><i></i></span><span>sibapak.pocari.id</span><span class="browser-lock" aria-hidden="true">↗</span></div><a class="sibapak-screen" href="https://raw.githubusercontent.com/nadilaerianiafsri-nea/nadila-portfolio/main/assets/sibapak-original.png?v=184f2da53c0b" target="_blank" rel="noopener noreferrer" aria-label="Open full-resolution SiBapak screenshot"><img src="https://raw.githubusercontent.com/nadilaerianiafsri-nea/nadila-portfolio/main/assets/sibapak-original.png?v=184f2da53c0b" data-sibapak-image data-local-fallback="assets/sibapak-original.png" alt="Screenshot of the SiBapak website homepage" loading="lazy" decoding="async" width="1920" height="1080"></a><a class="sibapak-fullsize" href="https://raw.githubusercontent.com/nadilaerianiafsri-nea/nadila-portfolio/main/assets/sibapak-original.png?v=184f2da53c0b" target="_blank" rel="noopener noreferrer"><span data-i18n="viewScreenshot">View full-resolution screenshot</span><span aria-hidden="true">↗</span></a></div></div><div class="project-info"><span class="project-number" data-i18n="p1Label">PROJECT 01 / ACADEMIC COLLABORATION</span><h3>SiBapak <span class="live-indicator" data-i18n="liveLabel">Website link</span></h3><p data-i18n="p1Desc">Sistem Informasi Posbankum Berdampak — a collaborative web platform supporting access to Posbankum-related information.</p><div class="tags"><span class="tag">Web Application</span><span class="tag">Collaboration</span><span class="tag">Public Information</span></div><div class="project-actions"><a class="project-visit" href="https://sibapak.pocari.id/" target="_blank" rel="noopener noreferrer"><span data-i18n="visitProject">Visit live website</span><span aria-hidden="true">↗</span></a><button class="project-link" data-project="sibapak" type="button"><span data-i18n="projectDetails">Explore project details</span> <span aria-hidden="true">↗</span></button></div></div></article>
-      <article class="project-card second"><div class="project-visual"><div class="browser-frame"><div class="browser-top"><span class="browser-dots"><i></i><i></i><i></i></span><span>portalperpusriau.tech</span><span class="browser-lock" aria-hidden="true">↗</span></div><img src="assets/library-portal-live.png" alt="Actual homepage screenshot of Kemenkum Riau Library Portal" loading="lazy" width="1649" height="784"></div></div><div class="project-info"><span class="project-number" data-i18n="p2Label">PROJECT 02 / INTERNSHIP</span><h3>Library Portal <span class="live-indicator" data-i18n="liveLabel">Website link</span></h3><p data-i18n="p2Desc">Full-stack development of the Kemenkum Riau Library Portal using Next.js, NestJS, and MariaDB; containerized with Docker Compose and deployed to a Linux VPS.</p><div class="tags"><span class="tag">Next.js & NestJS</span><span class="tag">Docker Compose</span><span class="tag">Linux VPS</span></div><div class="project-actions"><a class="project-visit" href="https://portalperpusriau.tech/" target="_blank" rel="noopener noreferrer"><span data-i18n="visitProject">Visit live website</span><span aria-hidden="true">↗</span></a><button class="project-link" data-project="library" type="button"><span data-i18n="projectDetails">Explore project details</span> <span aria-hidden="true">↗</span></button></div></div></article>
-    </div></section>
-
-    <section class="section" id="experience"><div class="container journey-grid"><div><span class="eyebrow" data-i18n="expEyebrow">03 / Experience & education</span><h2 class="sec-title" data-i18n-html="expTitle">Learning through<span class="line-break"></span>real experiences.</h2><p class="lead" data-i18n="expIntro">From classroom foundations to contributing to real web applications.</p></div><div class="journey-list"><article class="journey-item"><span class="journey-icon">↗</span><div><h3 data-i18n="expInternTitle">Full-Stack Developer Intern</h3><span class="org">Kementerian Hukum Republik Indonesia · Riau</span><span class="time" data-i18n="internDate">Aug 2026 – Present · On-site</span><p data-i18n="expInternText">Contributing to frontend and backend development, application deployment using Docker Compose and Linux VPS, and troubleshooting during internship projects.</p></div></article><article class="journey-item"><span class="journey-icon">⌘</span><div><h3 data-i18n="expEduTitle">Informatics Engineering</h3><span class="org">Politeknik Caltex Riau</span><span class="time" data-i18n="eduDate">Aug 2023 – Present</span><p data-i18n="expEduText">Diploma IV / Bachelor of Applied Science, applying software development knowledge through academic and collaborative projects.</p></div></article></div></div></section>
-
-    <section class="section skills" id="skills"><div class="container skills-grid"><div><span class="eyebrow" data-i18n="skillsEyebrow">04 / Areas of expertise</span><h2 class="sec-title" data-i18n-html="skillsTitle">What I do<span class="line-break"></span>and keep learning.</h2><p class="lead" data-i18n="skillsIntro">Practical skills from real work, with room to keep growing.</p></div><div class="skill-list"><article class="skill-card"><span class="skill-icon">⌘</span><h3>Frontend Development</h3><p data-i18n="s1Text">Building responsive interfaces and user-facing experiences using Next.js and React.</p></article><article class="skill-card"><span class="skill-icon">⌁</span><h3>Backend & Full-Stack</h3><p data-i18n="s2Text">Integrating frontend, NestJS backend services, and MariaDB.</p></article><article class="skill-card"><span class="skill-icon">◈</span><h3>Docker & Deployment</h3><p data-i18n="s3Text">Managing multi-service local environments with Docker Compose and deploying to a Linux VPS.</p></article><article class="skill-card"><span class="skill-icon">▣</span><h3 data-i18n="s4Title">Collaboration</h3><p data-i18n="s4Text">Learning through teamwork, practical problem solving, and project delivery.</p></article></div></div></section>
-
-    <section class="contact" id="contact"><div class="container"><div class="contact-panel"><div><span class="eyebrow" data-i18n="contactEyebrow">05 / Get in touch</span><h2 data-i18n-html="contactTitle">Let's build something<span class="line-break"></span>meaningful.</h2><p data-i18n="contactDesc">Interested in software development, collaboration, or sharing ideas? Feel free to connect.</p></div><div class="contact-actions"><a class="button button-primary" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nadila-eriani-afsri-a661a6403/"><span data-i18n="connectLinkedIn">Connect on LinkedIn</span> <span aria-hidden="true">↗</span></a><button class="button button-light" id="copyLink" type="button"><span data-i18n="copyProfile">Copy profile link</span> <span aria-hidden="true">⧉</span></button></div></div></div></section>
-  </main>
-
-  <footer class="footer"><div class="container footer-inner"><span>© <span id="year">2026</span> Nadila Eriani Afsri. <span data-i18n="footerMade">Made with care.</span></span><a href="#home" data-i18n="backTop">Back to top ↑</a></div></footer>
-
-  <dialog id="projectModal" aria-labelledby="modalTitle"><div class="modal-content"><div class="modal-top"><span class="eyebrow" data-i18n="modalEyebrow">Project overview</span><button id="closeModal" type="button" aria-label="Close dialog">×</button></div><h2 id="modalTitle"></h2><p id="modalDescription"></p><div class="tags" id="modalTags"></div><div id="modalAction"></div></div></dialog>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f5f0" />
+    <meta name="description" content="Nadila Eriani Afsri — Full-Stack Developer Intern. Selected projects, frontend and backend development, Docker, and Linux VPS deployment." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nadila Eriani Afsri — Full-Stack Developer" />
+    <meta property="og:description" content="Selected work and experience from frontend development to deployment." />
+    <title>Nadila Eriani Afsri — Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
