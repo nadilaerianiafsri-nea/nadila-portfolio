@@ -1,34 +1,60 @@
-# Nadila Eriani Afsri — Portfolio Website
+# Nadila Eriani Afsri — Portfolio (Local ZIP)
 
-Portofolio website satu halaman dengan desain modern dan responsif.
+A complete, editable, responsive portfolio website. The design follows the earlier single-page portfolio style and updates the public project information to match the internship and LinkedIn experience supplied by the owner.
 
-## Cara membuka
+## Open locally (no installation required)
 
-1. Ekstrak file ZIP.
-2. Buka `index.html` di Chrome, Edge, Firefox, atau browser lainnya.
-3. Tidak perlu instalasi Node.js atau server.
-4. Pilih bahasa EN/ID di kanan atas.
+1. Extract this ZIP into a folder.
+2. Open `index.html` in Chrome, Edge, or Firefox.
+3. Switch between **EN** and **ID** in the top-right corner.
+4. Edit HTML, CSS, or JS in VS Code as needed.
 
-Alternatifnya, unduh versi `Nadila_Eriani_Afsri_Portfolio.html` yang sudah berisi seluruh gambar dalam satu file.
+For a local development server with Python (optional):
 
-## Isi
+```bash
+python -m http.server 8000
+```
 
-- Hero / profil pribadi
-- Tentang saya
-- Proyek: SiBapak dan Library Portal
-- Pengalaman magang dan pendidikan
-- Bidang fokus / keahlian
-- Kontak LinkedIn
+Then open `http://localhost:8000`.
 
-## Sumber dan catatan penting
+## Project structure
 
-- Nama, foto profil, headline, institusi, pendidikan, dan SiBapak berdasarkan PDF profil LinkedIn yang disediakan.
-- Library Portal ditambahkan berdasarkan informasi proyek frontend yang sudah dibahas sebelumnya.
-- Tampilan ilustrasi Portal Perpustakaan bukan screenshot aplikasi asli.
-- Detail kontribusi SiBapak belum spesifik di LinkedIn, sehingga ditulis sebagai kontribusi kolaboratif tanpa mengklaim posisi, tech stack, atau angka yang tidak terverifikasi.
-- Tautan profil LinkedIn dan website SiBapak dapat disunting pada `index.html`.
-- Google Fonts dipanggil secara online; apabila offline, sistem akan menggunakan font alternatif.
+```text
+Nadila_Portfolio_Revisi/
+├── index.html                  # Structure and public content
+├── styles.css                  # Responsive visual design
+├── app.js                      # Bilingual text, navigation and project modal
+├── assets/
+│   ├── favicon.svg
+│   ├── nadila-profile.png      # Image extracted from owner-supplied LinkedIn PDF
+│   ├── sibapak-original.png    # Image extracted from owner-supplied LinkedIn PDF
+│   └── library-portal-live.png # Cropped actual public homepage screenshot supplied in chat
+└── README.md
+```
 
-## Untuk mengedit
+## Scope of updates
 
-Semua desain (HTML, CSS, JavaScript) berada di `index.html`, sedangkan foto dan screenshot ada dalam folder `assets/`. Edit langsung di VS Code.
+- Changed the internship title to **Full-Stack Developer Intern**.
+- Corrected the library portal from frontend-only to full-stack involvement.
+- Explicitly reflected Next.js, NestJS, MariaDB, Docker Compose, and Linux VPS work.
+- Added a live website link to the Library Portal project detail dialog.
+- Replaced illustrative Library Portal UI with an owner-supplied real screenshot.
+- Preserved bilingual EN/ID navigation, responsive layout, projects, experience, skills, and contact features.
+- Kept SiBapak descriptions conservative and did not claim unsupported individual responsibilities.
+- Avoided an "Open to Work" announcement; the header instead indicates ongoing projects and learning.
+
+## Important privacy notes
+
+- This ZIP includes only the **portfolio website** source code, not the private `perpus-portal` project code.
+- No SSH hostnames, credentials, API keys, or private repository files are published in this package.
+- Confirm that project screenshots are approved for public display before uploading to any public host.
+
+## Links
+
+- LinkedIn: https://www.linkedin.com/in/nadila-eriani-afsri-a661a6403/
+- Library Portal (public): https://portalperpusriau.tech/
+- SiBapak (listed in existing portfolio): https://sibapak.pocari.id/
+
+## GitHub status
+
+This ZIP is meant for local review. It has **not** been uploaded as a new GitHub commit. The earlier draft branch and pull request created in the previous conversation step are separate from this ZIP, and `main` was not modified by that draft.
