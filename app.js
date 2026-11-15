@@ -5,6 +5,18 @@
   'use strict';
 
   const LINKEDIN = 'https://www.linkedin.com/in/nadila-eriani-afsri-a661a6403/';
+  // If the high-resolution public GitHub image cannot be reached offline,
+  // keep the existing bundled screenshot as a non-breaking fallback.
+  const sibapakScreenshot = document.querySelector('[data-sibapak-image]');
+  if (sibapakScreenshot) {
+    sibapakScreenshot.addEventListener('error', () => {
+      const fallback = sibapakScreenshot.dataset.localFallback;
+      if (fallback && sibapakScreenshot.getAttribute('src') !== fallback) {
+        sibapakScreenshot.src = fallback;
+      }
+    });
+  }
+
   const PROJECTS = {
     sibapak: {
       name: 'SiBapak',
@@ -38,7 +50,7 @@
       p2Label: 'PROJECT 02 / INTERNSHIP',
       p1Desc: 'Sistem Informasi Posbankum Berdampak — a collaborative web platform supporting access to Posbankum-related information.',
       p2Desc: 'Full-stack development of the Kemenkum Riau Library Portal using Next.js, NestJS, and MariaDB; containerized with Docker Compose and deployed to a Linux VPS.',
-      projectDetails: 'Explore project details',
+      projectDetails: 'Project details', viewScreenshot: 'View full-resolution screenshot', visitProject: 'Visit live website', liveLabel: 'Website link',
       expEyebrow: '03 / Experience & education', expTitle: "Learning through<span class='line-break'></span>real experiences.",
       expIntro: 'From classroom foundations to contributing to real web applications.',
       expInternTitle: 'Full-Stack Developer Intern', internDate: 'Aug 2026 – Present · On-site',
@@ -78,7 +90,7 @@
       p2Label: 'PROYEK 02 / MAGANG',
       p1Desc: 'Sistem Informasi Posbankum Berdampak — platform web kolaboratif untuk mendukung akses informasi terkait Posbankum.',
       p2Desc: 'Pengembangan full-stack Portal Perpustakaan Kemenkum Riau dengan Next.js, NestJS, dan MariaDB; menggunakan Docker Compose dan deployment ke VPS Linux.',
-      projectDetails: 'Lihat detail proyek',
+      projectDetails: 'Detail proyek', viewScreenshot: 'Lihat screenshot resolusi penuh', visitProject: 'Kunjungi website', liveLabel: 'Tautan website',
       expEyebrow: '03 / Pengalaman & pendidikan', expTitle: 'Belajar dari<span class="line-break"></span>pengalaman nyata.',
       expIntro: 'Dari dasar perkuliahan hingga kontribusi dalam pengembangan aplikasi web nyata.',
       expInternTitle: 'Full-Stack Developer Intern', internDate: 'Agu 2026 – Sekarang · On-site',

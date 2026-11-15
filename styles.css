@@ -28,3 +28,64 @@ dialog{border:1px solid #e5eaf0;border-radius:22px;padding:0;max-width:570px;wid
 @media(max-width:780px){.container{width:min(calc(100% - 42px),650px)}.header-inner{height:70px}.nav{display:none;position:absolute;top:69px;left:0;right:0;background:#f7f7f4;padding:21px;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;box-shadow:0 20px 30px #141e3010}.nav.open{display:flex}.nav a{padding:15px 8px;font-size:15px}.menu-btn{display:flex}.hero{padding:55px 0 80px}.hero-grid{display:flex;flex-direction:column;align-items:stretch;gap:53px;min-height:0}.portrait-wrap{max-width:440px;width:100%;margin:auto;padding-right:20px}.portrait{aspect-ratio:1.15}.hero h1{font-size:clamp(47px,8.7vw,73px)}.portrait-sticker{left:0;bottom:-18px}.strip-inner{flex-direction:column;gap:15px;align-items:flex-start;padding:25px 0}.strip-list{gap:15px;font-size:13px}.section{padding:78px 0}.about-grid,.journey-grid,.skills-grid{grid-template-columns:1fr;gap:30px}.work-head{align-items:start;flex-direction:column}.project-card{grid-template-columns:1fr}.project-visual{min-height:0;padding:25px}.project-info{padding:32px 28px 37px}.contact{padding:75px 0 55px}.contact-panel{padding:43px 30px;flex-direction:column;align-items:stretch}.contact-actions{min-width:0;align-self:flex-start}.contact-panel::after{font-size:150px;top:-35px}.skill-list{gap:12px}}
 @media(max-width:430px){.container{width:calc(100% - 34px)}.header-actions{gap:6px}.logo{font-size:18px}.logo-mark{width:34px;height:34px}.hero h1{font-size:clamp(45px,12vw,56px)}.hero-intro{font-size:16px}.hero-actions{align-items:stretch}.hero-actions .button{width:100%}.hero-meta{gap:14px}.portrait-wrap{padding:10px 15px 0 8px}.portrait{aspect-ratio:1.06}.portrait-sticker{bottom:-19px;padding:11px 13px}.sticker-icon{width:39px;height:39px}.sec-title{font-size:35px}.about-content p{font-size:17px}.facts{grid-template-columns:1fr 1fr}.project-visual{padding:16px}.browser-top{height:26px}.skill-list{grid-template-columns:1fr}.skill-card{min-height:0}.footer-inner{flex-direction:column}.modal-content{padding:25px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button,.toast{transition:none}}
+
+
+/* Visual refinement — clearer hierarchy, stronger project CTAs, responsive polish */
+:root{--bg:#f7f9fc;--surface:#ffffff;--ink:#152238;--muted:#62718a;--line:#dce4ef;--accent:#375ee6;--accent2:#e8eeff;--soft:#f1f5fa;--dark:#101d34;--radius:24px}
+body{background:var(--bg)}
+.site-header{background:rgba(247,249,252,.92);border-bottom:1px solid #e5ebf4}
+.logo-mark{background:linear-gradient(135deg,#1a2b4c,#375ee6);box-shadow:0 8px 18px #233d8b24}
+.nav a{position:relative}
+.nav a::after{content:'';position:absolute;left:0;right:100%;height:2px;bottom:-10px;background:var(--accent);transition:right .2s}
+.nav a:hover::after{right:0}
+.hero{position:relative;background:radial-gradient(circle at 81% 18%,#e5ecff 0,transparent 32%),linear-gradient(160deg,#fbfcff 0%,#f4f7fc 100%)}
+.hero::before{content:'';position:absolute;left:-100px;bottom:-100px;width:360px;height:360px;border:1px solid #d9e3f5;border-radius:50%;pointer-events:none}
+.hero h1{letter-spacing:-.065em}
+.hero h1 em{background:linear-gradient(100deg,#375ee6,#4b85ba);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-intro{color:#52627b}
+.button{border-radius:13px}
+.button-primary{background:#294bd2;box-shadow:0 12px 24px #294bd228}
+.button-primary:hover{background:#1c399f}
+.portrait{box-shadow:0 24px 65px #19346023}
+.portrait-wrap::before{border-color:#bfcdef}
+.micro-strip{background:#fff}
+.section{scroll-margin-top:80px}
+.work{background:linear-gradient(155deg,#101d34 0%,#172b47 100%)}
+.project-card{background:#1c304d;border:1px solid #355073;border-radius:26px;transition:transform .25s,border-color .25s,box-shadow .25s}
+.project-card:hover{transform:translateY(-4px);border-color:#6c86b3;box-shadow:0 20px 45px #07101f33}
+.project-visual{background:linear-gradient(140deg,#dce7fa,#eef4ff);padding:40px;overflow:hidden}
+.project-card.second .project-visual{background:linear-gradient(140deg,#e5f2fa,#f3f6fb)}
+.browser-frame{border-radius:14px;box-shadow:0 22px 48px #0c25402e;transition:transform .25s}
+.project-card:hover .browser-frame{transform:scale(1.025)}
+.browser-top{height:35px;font-size:10px;color:#596b84;font-weight:700}
+.browser-lock{margin-left:auto;color:#5571a6;font-size:14px}
+.project-info{padding:50px 44px}
+.project-info h3{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.live-indicator{font:700 10px 'DM Sans',sans-serif;letter-spacing:0;color:#b6f5d1;background:#244b4b;border:1px solid #427968;border-radius:999px;padding:6px 10px;white-space:nowrap}
+.project-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px 22px;margin-top:7px}
+.project-visit{display:inline-flex;gap:12px;align-items:center;background:#fff;color:#172a49;padding:13px 17px;border-radius:11px;font-size:12px;font-weight:800;transition:background .2s,transform .2s}
+.project-visit:hover{background:#dce8ff;transform:translateY(-2px)}
+.project-link{padding:12px 0;text-decoration:none;color:#c8d9fa;font-size:12px}
+.project-link:hover{text-decoration:underline}
+.tags{margin:22px 0}
+.tag{background:#ffffff0b;border-color:#506785}
+.skill-card{border-radius:18px;transition:transform .2s,box-shadow .2s}
+.skill-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px #10274c10}
+.contact-panel{background:linear-gradient(130deg,#e5ecff,#eef4fc);border-color:#d6e1fa}
+@media(max-width:780px){.nav{background:#f7f9fc}.project-visual{padding:26px}.project-info{padding:30px}.project-card:hover{transform:none}}
+@media(max-width:430px){.project-visual{padding:16px}.project-actions{align-items:stretch;flex-direction:column}.project-visit,.project-link{justify-content:center;width:100%}.project-link{border:1px solid #536b8b;border-radius:10px}.project-info h3{font-size:30px}.live-indicator{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.project-card,.browser-frame,.skill-card,.project-visit,.nav a::after{transition:none}.project-card:hover,.project-card:hover .browser-frame,.skill-card:hover,.project-visit:hover{transform:none}}
+
+
+/* SiBapak screenshot: maintain natural ratio, make the focal area more legible at card size.
+   Full-resolution source: assets/sibapak-original.png (GitHub main, 1920x1080).
+   This does not sharpen or fabricate pixels: it avoids compressing the whole website into a tiny preview.
+*/
+.project-card--sibapak .project-visual{padding:20px;min-height:345px}
+.project-card--sibapak .browser-frame{max-width:640px}
+.project-card--sibapak .sibapak-screen{display:block;position:relative;overflow:hidden;aspect-ratio:16/9;background:#e8f0fe;cursor:zoom-in}
+.project-card--sibapak .sibapak-screen img{display:block;width:119%;max-width:none;height:100%;object-fit:cover;object-position:center;transform:translateX(-8%);image-rendering:auto}
+.project-card--sibapak .sibapak-fullsize{display:flex;gap:8px;align-items:center;justify-content:center;padding:13px 16px;background:#f8fafc;color:#23446d;font-weight:800;font-size:11px;text-decoration:none;letter-spacing:.015em;border-top:1px solid #e4eaf1}
+.project-card--sibapak .sibapak-fullsize:hover,.project-card--sibapak .sibapak-fullsize:focus-visible{background:#e9f0ff;color:#153783}
+@media(max-width:780px){.project-card--sibapak .project-visual{padding:15px;min-height:0}}
+@media(max-width:430px){.project-card--sibapak .project-visual{padding:12px}.project-card--sibapak .sibapak-screen img{width:116%;transform:translateX(-7%)}.project-card--sibapak .sibapak-fullsize{padding:12px 10px;font-size:10px}}
